@@ -57,7 +57,7 @@ PS> $env:API_ENV_VAR = "your-api-key-here"
 
 ### Set OpenAI API key
 * If you don't have an OpenAI API key, you can sign up [here](https://openai.com/index/openai-api/).
-*  Set `OPENAI_API_KEY` in your environment 
+*  Set `GROQ_API_KEY` in your environment 
 
 ### Sign up and Set LangSmith API
 * Sign up for LangSmith [here](https://docs.langchain.com/langsmith/create-account-api-key#create-an-account-and-api-key), find out more about LangSmith and how to use it within your workflow [here](https://www.langchain.com/langsmith). 
@@ -99,7 +99,14 @@ Open your browser and navigate to the Studio UI: `https://smith.langchain.com/st
 ```
 for i in {1..5}; do
   cp module-$i/studio/.env.example module-$i/studio/.env
-  echo "OPENAI_API_KEY=\"$OPENAI_API_KEY\"" > module-$i/studio/.env
+  echo "GROQ_API_KEY=\"$GROQ_API_KEY\"" > module-$i/studio/.env
 done
 echo "TAVILY_API_KEY=\"$TAVILY_API_KEY\"" >> module-4/studio/.env
 ```
+
+
+### Configurations:
+1. OpenAI: https://platform.openai.com/usage
+2. LangSmith: https://apac.smith.langchain.com/o/117cc09b-2a2a-44bd-80b5-37e19affa9ed/settings/apikeys
+3. Tavily: https://app.tavily.com/home
+4. LangSmith Studio: https://smith.langchain.com/studio/thread?baseUrl=http%3A%2F%2F127.0.0.1%3A2024&mode=graph&render=interact&assistantId=28d99cab-ad6c-5342-aee5-400bd8dc9b8b
